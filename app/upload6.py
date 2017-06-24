@@ -20,7 +20,7 @@ def upload6():
 			if webSearch:
 				web = webSearch.group(0)
 				#entries with file,cmd.exe,@eval,B374K,c99,system,r57shell,base64_decode,shell,php-backdoor ,aspxspy keywords are considered web shells in this case
-				if re.search('.*?((?i)file|(?i)cmd.exe|(?i)@eval|(?i)B374K|(?i)c99|(?i)system|(?i)r57shell|(?i)base64_decode|(?i)shell|(?i)php-backdoor |(?i)aspxspy).*?',web):
+				if re.search('.*?((?i)cmd.exe|(?i)@eval|(?i)B374K|(?i)c99|(?i)system|(?i)r57shell|(?i)base64_decode|(?i)shell|(?i)php-backdoor |(?i)aspxspy).*?',web):
 					#add entry to the list
 					list.append(line.rstrip("\n"))
 					test = True
@@ -30,7 +30,7 @@ def upload6():
 			if not test and reqSearch:
 				req = reqSearch.group(2)
 				#entries with file,cmd.exe,@eval,B374K,c99,system,r57shell,base64_decode,shell,php-backdoor ,aspxspy keywords are considered web shells in this case
-				if re.search('.*?((?i)file|(?i)cmd.exe|(?i)@eval|(?i)B374K|(?i)c99|(?i)system|(?i)r57shell|(?i)base64_decode|(?i)shell|(?i)php-backdoor |(?i)aspxspy).*?',req):
+				if re.search('.*?((?i)cmd.exe|(?i)@eval|(?i)B374K|(?i)c99|(?i)system|(?i)r57shell|(?i)base64_decode|(?i)shell|(?i)php-backdoor |(?i)aspxspy).*?',req):
 					#add entry to the list
 					list.append(line.rstrip("\n"))
 		

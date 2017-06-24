@@ -43,7 +43,7 @@ def upload4():
 		#write results to flat file
 		file = open("task4.txt", "w")
 		for sqli in list:
-			file.write(sqli)
+			file.write(sqli+"\n")
 		file.close()
 		
    return render_template('about.html')

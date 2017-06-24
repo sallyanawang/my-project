@@ -19,7 +19,7 @@ def upload5():
 				".*?((?i)include).*?(\().*?(\))",
 				".*?(\?+$)",
 				".*?((?i)http|(?i)www).*?",
-				".*?((?i)file).*?",
+				".*?((?i)file).*?(=).*?",
 				]
 		combined = "(" + ")|(".join(regexes) + ")"
 		
@@ -35,7 +35,7 @@ def upload5():
 		#write results to flat file		
 		file = open("task5.txt", "w")
 		for rfi in list:
-			file.write(rfi)
+			file.write(rfi+"\n")
 		file.close()
 		
    return render_template('about.html')
