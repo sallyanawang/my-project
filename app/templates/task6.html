@@ -1,0 +1,21 @@
+<!-- index.html-->
+
+{% extends "base.html" %}
+{% block title %}Task 6{% endblock %}
+{% block body %}
+<div class="jumbotron">
+
+  <h1>Task 6</h1>
+  <form method='post' action='/upload6' enctype='multipart/form-data'>
+    <br>
+	<center>
+	<p>
+	<input type='file' name='newfile'>
+	<br>
+	<input type='submit' value='Submit'>
+	</p>
+	</center>
+   </form>
+
+</div>
+{% endblock %}
